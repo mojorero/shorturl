@@ -1,4 +1,4 @@
-package de.dkb.dkbly
+package com.company.urlshortener
 
 import io.restassured.RestAssured
 import org.junit.jupiter.api.Test
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.TestInstance
 internal class UrlShortenerServiceIntegrationTest {
     @Test
     fun when_generateShortUrlAndShortUrlNonExisting_then_returnsShortUrl() {
-        val randomUrl = "https://dein-antrag.dkb.de/girokonto-start/" + Math.random()
+        val randomUrl = "https://originalurl.com/" + Math.random()
         RestAssured.with().body("  \"originalUrl\": \"$randomUrl/\"\n")
             .`when`()
             .request(HTTP_METHOD_POST, URL_SHORTENER_ENDPOINT)
@@ -18,7 +18,7 @@ internal class UrlShortenerServiceIntegrationTest {
 
     @Test
     fun when_getLongUrlForShortUrl_then_returnsOriginalUrl() {
-        val randomUrl = "https://dein-antrag.dkb.de/girokonto-start/" + Math.random()
+        val randomUrl = "https://originalurl.com" + Math.random()
         val responseForPost = RestAssured.with().body("  \"originalUrl\": \"$randomUrl/\"\n")
             .`when`()
             .request(HTTP_METHOD_POST, URL_SHORTENER_ENDPOINT)

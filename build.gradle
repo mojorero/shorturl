@@ -6,7 +6,7 @@ plugins {
     id 'org.jetbrains.kotlin.plugin.spring' version '2.0.0'
 }
 
-group = 'de.dkb'
+group = 'com.company'
 version = '0.0.1-SNAPSHOT'
 
 java {
@@ -35,7 +35,7 @@ sourceSets {
 }
 
 task("integrationTest", type: Test) {
-    include 'de/dkb/dkbly/UrlShortenerServiceIntegrationTest.class'
+    include 'com/company/urlshortener/UrlShortenerServiceIntegrationTest.class'
     testClassesDirs = sourceSets.integrationTest.output.classesDirs
     classpath = sourceSets.integrationTest.runtimeClasspath
     useJUnitPlatform()

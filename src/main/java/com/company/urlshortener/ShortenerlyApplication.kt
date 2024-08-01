@@ -1,12 +1,12 @@
-package de.dkb.dkbly
+package com.company.urlshortener
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class DkblyApplication
+class UrlShortenerApplication
 
 fun main(args: Array<String>) {
-    runApplication<DkblyApplication>(*args)
+    runApplication<UrlShortenerApplication>(*args)
 }
 

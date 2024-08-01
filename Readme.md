@@ -1,7 +1,7 @@
 # URL shortener API
 
 This is my proposed solution for the challenge to manage the creation and retrieval of resources which represent pairs of original URLs and their corresponding short URLs.  
-Welcome to this code and have fun managing cars!
+
 
 Imagine you're building a URL shortener as a potential next-big-thing product. To test it, we would like to first have an MVP with only basic functionality.  
 However, if everything goes according to plan, we will invest more effort into this so even the MVP should be a modern, nicely written, maintainable and production ready API.
@@ -15,13 +15,25 @@ In order to speed up the development, the testing of the features is done by uni
 
 ## Getting started
 
-To build the project, it is necessary to run the following commands in the project root:
+To build the project, it is necessary to run the following command in the project root:
 
 ```
 gradle build
 ```
 
-To create a docker image called carsimage, using the description from Dockerfile:
+With this the project would be ready to be run. The next step is to start the application. To do this, run the following command:
+
+```
+java -jar .\build\libs\app.jar
+```
+
+Or also this command:
+
+```
+gradle bootRun
+```
+
+To create a docker image called urlshortenerimage, using the description from Dockerfile:
 ```
 docker build -f ./app/Dockerfile -t urlshortenerimage .
 ```
@@ -37,7 +49,7 @@ After the steps already mentioned, the system should be up und running. Now we c
 gradle integrationTest
 ```
 
-To stop the container carscontainer:
+To stop the container urlshortenercontainer:
 ```
 docker stop urlshortenercontainer
 ```
@@ -49,7 +61,7 @@ docker system prune
 
 ## Most important technologies and tools used
 
-- Java 21
+- Kotlin 2.0.0
 - Spring boot for the server framework
 - Spring data JPA as specification of the database management
 - H2 as a database engine  
@@ -57,10 +69,6 @@ docker system prune
 - Gradle for building the project
 - Rest assured to test the API
 - Lombok to generate code
-
-## About the API specification
-
-The URL shortener API is defined in the following OpenAPI file:
 
 ## Sample request to create a short url for the given URL (local environment)
 
@@ -70,7 +78,7 @@ POST http://localhost:8080/api/url
 Content-Type: application/json
 
 {
-  "originalUrl": "https://dein-antrag.dkb.de/girokonto-start/"
+  "originalUrl": "google.com"
 }
 ```
 
@@ -95,7 +103,7 @@ Content-Length: 140
 Date: Wed, 31 Jul 2024 20:30:46 GMT
 
 The URL {
-  "originalUrl": "https://dein-antrag.dkb.de/girokonto-start/"
+  "originalUrl": "https://www.google.com"
 } could not be created because it is already present in the system.
 
 Response code: 409

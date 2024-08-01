@@ -1,4 +1,4 @@
-package de.dkb.dkbly.exception
+package com.company.urlshortener.exception
 
 /**
  * Exception to manage HTTP Status 409.

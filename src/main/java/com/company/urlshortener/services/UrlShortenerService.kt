@@ -1,9 +1,10 @@
-package de.dkb.dkbly.services
+package com.company.urlshortener.services
 
-import de.dkb.dkbly.exception.ConflictException
-import de.dkb.dkbly.exception.UrlNotFoundException
-import de.dkb.dkbly.persistence.model.UrlMapping
-import de.dkb.dkbly.persistence.repository.UrlMappingRepository
+
+import com.company.urlshortener.exception.ConflictException
+import com.company.urlshortener.exception.UrlNotFoundException
+import com.company.urlshortener.persistence.model.UrlMapping
+import com.company.urlshortener.persistence.repository.UrlMappingRepository
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 import java.security.SecureRandom

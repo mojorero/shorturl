@@ -1,6 +1,7 @@
-package de.dkb.dkbly.controller
+package com.company.urlshortener.controller
 
-import de.dkb.dkbly.services.UrlShortenerService
+
+import com.company.urlshortener.services.UrlShortenerService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder

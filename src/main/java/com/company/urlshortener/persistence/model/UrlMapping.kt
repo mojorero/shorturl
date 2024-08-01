@@ -1,4 +1,4 @@
-package de.dkb.dkbly.persistence.model
+package com.company.urlshortener.persistence.model
 
 import jakarta.persistence.*
 

@@ -1,6 +1,6 @@
-package de.dkb.dkbly.persistence.repository
+package com.company.urlshortener.persistence.repository
 
-import de.dkb.dkbly.persistence.model.UrlMapping
+import com.company.urlshortener.persistence.model.UrlMapping
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface UrlMappingRepository : JpaRepository<UrlMapping?, Long?> {

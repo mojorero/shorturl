@@ -1,4 +1,4 @@
-package de.dkb.dkbly.exception
+package com.company.urlshortener.exception
 
 import lombok.extern.slf4j.Slf4j
 import org.springframework.http.HttpHeaders

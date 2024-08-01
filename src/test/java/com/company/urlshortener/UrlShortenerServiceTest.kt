@@ -1,10 +1,12 @@
-package de.dkb.dkbly
+package com.company.urlshortener
 
-import de.dkb.dkbly.exception.ConflictException
-import de.dkb.dkbly.exception.UrlNotFoundException
-import de.dkb.dkbly.persistence.model.UrlMapping
-import de.dkb.dkbly.persistence.repository.UrlMappingRepository
-import de.dkb.dkbly.services.UrlShortenerService
+
+import com.company.urlshortener.exception.ConflictException
+import com.company.urlshortener.exception.UrlNotFoundException
+import com.company.urlshortener.persistence.model.UrlMapping
+
+import com.company.urlshortener.persistence.repository.UrlMappingRepository
+import com.company.urlshortener.services.UrlShortenerService
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
